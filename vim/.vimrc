@@ -28,14 +28,16 @@ call plug#end()
 
 colorscheme wal
 hi StatusLine ctermbg=none cterm=bold
-
+hi! link Conceal Special
+hi! link Operator Normal
 
 " Sensible plugin
 set scrolloff=10
 set list
 set listchars=tab:\ \ ,trail:·,nbsp:_
 
-" Autocmd
+" Markdown plugin
+
 autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
 autocmd BufWritePost *polybar/config !pkill -USR1 polybar
 
@@ -43,4 +45,17 @@ autocmd BufWritePost *polybar/config !pkill -USR1 polybar
 let mapleader = ","
 
 nmap <leader>c :w! \| !compiler <c-r>%<CR><CR>
-nmap <leader>` i``````<Esc>3h<CR>
+
+" markdown shortcuts
+autocmd filetype *rmd nmap <Space><Space> /<++><Esc>d4li
+autocmd filetype *rmd nmap <leader>` a```{<++>}<CR><++><CR>```<Esc><Space><Space>
+autocmd filetype *rmd nmap <leader>$ a$$<Esc>i
+autocmd filetype *rmd nmap <leader>f a\frac{}{<++>}<Esc>6hi
+autocmd filetype *rmd nmap <leader>l a\lim_{<++> \to <++>} <++><Esc><Space><Space>
+autocmd filetype *rmd nmap <leader>-> a\to<Esc>
+autocmd filetype *rmd nmap <leader>d a\delta <Esc>
+autocmd filetype *rmd nmap <leader>D a\Delta <Esc>
+
+
+
+

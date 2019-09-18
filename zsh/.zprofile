@@ -11,6 +11,8 @@ export DWM=$HOME/repos/dwm
 export DMENU=$HOME/repos/dmenu
 
 export SCRIPTS=$HOME/.config/scripts
+export SCHOOL=$HOME/school
+export WORK=$HOME/work
 
 export EDITOR='vim'
 export IDE='code-oss'

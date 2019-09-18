@@ -13,8 +13,8 @@ super + n
 
 ## NODE GESTION
 # close and kill
-super + {_,shift + }c
-	bspc node -{c,k}
+super + c
+	bspc node -c
 
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
