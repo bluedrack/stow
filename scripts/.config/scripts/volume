@@ -1,0 +1,10 @@
+#!/bin/sh
+
+VOL=$(pulsemixer --get-volume | awk '{print $1}')
+
+if test $VOL = 0; then
+    echo "mute"
+else
+    echo "vol.$VOL"
+fi
+

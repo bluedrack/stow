@@ -1,0 +1,7 @@
+#!/bin/sh
+
+read -p "Name of your script: " NAME
+
+
+echo "#!/bin/sh" >> $SCRIPTS/$NAME
+chmod +x $SCRIPTS/$NAME

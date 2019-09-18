@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if test -f $HOME/.vimrccou
+then
+	echo "salut"
+else
+	echo "non c'est ramadan"
+fi

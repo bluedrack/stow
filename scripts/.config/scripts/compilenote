@@ -1,0 +1,22 @@
+#!/bin/sh
+
+L=$(cat ~/school/branches)
+
+
+DI=$(echo  "$L" | dmenu -i -p "Which discipline ?")
+
+if test $DI; then
+
+	HEADER=$(cat ~/school/header | sed "s/TITLE/$DI/;s/DATE/$(date +"%d.%m.%y")/")
+	PA="$HOME/school/$DI"	
+	cd $PA
+	echo "$HEADER" > /tmp/notes.rmd
+	cat [0-9]*.rmd >> /tmp/notes.rmd
+	compiler /tmp/notes.rmd
+	mv /tmp/notes.pdf $PA
+
+	OPEN=$(echo "yes\nno" | dmenu -i -p "Want to open it ?")
+	if test $OPEN = yes; then
+		pdf $PA/notes.pdf
+	fi
+fi

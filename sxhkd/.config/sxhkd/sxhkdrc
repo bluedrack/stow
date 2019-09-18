@@ -1,0 +1,54 @@
+
+super + Return
+    $TERMINAL
+
+super + shift + Return
+    dmenu_run
+
+super + w
+    $BROWSER
+
+super + n
+    $TERMINAL -e createnote
+
+## NODE GESTION
+# close and kill
+super + {_,shift + }c
+	bspc node -{c,k}
+
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+
+super + {_, shift} + Tab
+    bspc node --focus {prev,next}
+
+super + {_, shift} + {h,j,k,l}
+    bspc node --{focus,swap} {west,south,north,east}
+
+super + {_, shift} + f
+    bspc node -t \~{fullscreen,floating}
+
+super + control + {h,j,k,l}
+    {D1=west;D2=east;INC=-10;,D1=south;D2=north;INC=+10;,D1=north;D2=south;INC=-10;,D1=east;D2=west;INC=+10;} \
+    bspc node @$D1 -r $INC || bspc node @$D2 -r $INC
+
+super + b
+    bspc node \@ --balance
+
+## SPECIAL KEYS
+
+XF86Audio{Raise,Lower}Volume
+    pulsemixer --change-volume {+10,-10}
+
+XF86AudioMute
+    pulsemixer --toggle-mute
+
+XF86MonBrightness{Up,Down}
+    xbacklight {-inc,-dec} 10
+
+XF86Bluetooth
+    blueman-manager
+
+XF86Calculator
+    $TERMINAL -e $CALCULATOR

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+
+BAT=$(acpi | awk -F "," '{print $2}')
+
+echo $BAT
+
+if test $BLOCK_BUTTON = 1; then
+	notify-send -t 3000 "Remaining" "$(acpi | awk '{print $5}')"
+fi
+
+if test $(echo $BAT | tr -d "%") -lt 5 ; then
+    notify-send "Baterry" "low"
+fi

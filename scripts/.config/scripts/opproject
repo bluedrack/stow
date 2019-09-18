@@ -1,0 +1,4 @@
+#!/bin/sh
+
+$($IDE $HOME/work/$(ls $HOME/work | dmenu))
+

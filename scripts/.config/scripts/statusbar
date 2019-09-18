@@ -1,0 +1,15 @@
+#! /bin/sh
+
+
+bat(){
+	bat=$(acpi| tr -s ", " "\n" | sed -n 4p)
+	echo "$bat B"
+}
+dt(){
+	date +"%a %b %d | %H:%M"
+}
+while true; do
+
+	xsetroot -name "| $(bat) | $(dt) "
+	sleep 1m
+done &

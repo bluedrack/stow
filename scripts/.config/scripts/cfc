@@ -1,0 +1,11 @@
+#!/bin/sh
+
+BM=".bmscript"
+CHOICE="$(cat $BM | awk '{ print $1}' | fzf --reverse)"
+if test ! -z  $CHOICE ; then
+	FILE=~/$(cat $BM | grep "$CHOICE" | awk '{print $2}')
+	vim $FILE
+fi
+
+
+

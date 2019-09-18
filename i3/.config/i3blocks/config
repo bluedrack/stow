@@ -1,0 +1,13 @@
+
+[volume]
+command=volume
+interval=10
+
+[battery]
+command=battery
+interval=60
+
+[time]
+command=date +"%a %d %b %H:%M"
+interval=60
+

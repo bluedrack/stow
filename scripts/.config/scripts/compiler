@@ -1,0 +1,14 @@
+#!/bin/sh
+
+
+file=$(readlink -f "$1")
+dir=$(dirname "$file")
+base="${file%.*}"
+
+cd "$dir" || exit
+
+case "$file" in
+	*\.rmd) echo "require(rmarkdown); render('$file')" | R -q --vanilla ;;
+	*\.md) pandoc "$file" --pdf-engine=xelatex -o "$base".pdf ;;
+	*config.h) sudo make install ;;
+esac

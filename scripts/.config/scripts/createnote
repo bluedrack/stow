@@ -1,0 +1,20 @@
+#!/bin/sh
+
+L=$(cat ~/school/branches)
+
+DI=$(echo "$L" | dmenu -i -p "Which discipline ?")
+
+if test $DI; then
+	PA="$HOME/school/$DI"
+	echo $PA
+	mkdir -p $PA
+	FILE=$PA/$(date +"%d_%m_%a").rmd
+	echo $FILE
+	if test -f $FILE
+	then
+		vim "+normal Go" +startinsert $FILE
+	else
+		# echo "%$(echo $DI | sed 's/.*/\u&/')\n%Orelian Kohler\n%$(date +"%A %d %B %y")" > $FILE 
+		vim "+normal Go" +startinsert $FILE
+	fi
+fi

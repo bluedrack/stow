@@ -1,0 +1,36 @@
+#!/bin/sh
+
+DIR="$HOME/wallpapers"
+WALL=$DIR/$(ls $DIR | dmenu -i -p "Wallpapers: ")
+if test -f $WALL; then
+	feh --bg-scale $WALL
+    A=$(echo "$(echo "scale=2;$(echo "scale=2;ibase=16; F0" | bc) / 256 * 100" | bc) / 1" | bc)
+    echo $A
+    wal -i $WALL --saturate 0.4
+
+    # export ALPHA=${printf '%x\n'$ALPHA}
+
+    makedwm () {
+		cd $DWM
+		sudo make clean install
+		killall dwm
+	}
+	makest () {
+		cd $ST
+		# pkill compton
+		# compton &
+		sudo make clean install
+	}
+	makedmenu (){
+		cd $DMENU
+	    sudo make clean install
+	}
+	makedunst(){
+		pkill dunst
+		cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst/dunstrc
+	}
+	makedunst
+    makest
+	makedmenu
+	# makedwm
+fi
