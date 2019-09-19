@@ -45,7 +45,7 @@ autocmd BufWritePost *polybar/config !pkill -USR1 polybar
 let mapleader = ","
 
 nmap <leader>c :w! \| !compiler <c-r>%<CR><CR>
-
+nmap <leader>o :w! \| !open	<c-r>%<CR><CR>
 " markdown shortcuts
 autocmd filetype *rmd nmap <Space><Space> /<++><Esc>d4li
 autocmd filetype *rmd nmap <leader>` a```{<++>}<CR><++><CR>```<Esc><Space><Space>

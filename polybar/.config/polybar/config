@@ -26,7 +26,7 @@ font-0 = monospace:pixelsize=14;0
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = pulseaudio battery date
+modules-right = notes pulseaudio battery date
 separator = "•"
 
 [module/xwindow]
@@ -85,6 +85,16 @@ label-volume = vol. %percentage%
 format-volume = <label-volume>
 label-muted-padding = 1
 format-volume-padding = 1
+
+
+[module/notes]
+
+
+type = custom/script
+
+exec = echo "n." $(ls ~/school/*/ -alt | grep rmd | wc -l)
+label-padding = 1
+interval = 120
 ; [module/date]
 ; type = internal/date
 ; interval = 60

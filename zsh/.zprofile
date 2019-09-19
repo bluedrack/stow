@@ -10,7 +10,7 @@ export ST=$HOME/repos/st
 export DWM=$HOME/repos/dwm
 export DMENU=$HOME/repos/dmenu
 
-export SCRIPTS=$HOME/.config/scripts
+export SCRIPTS=$HOME/dotfiles/scripts/.config/scripts
 export SCHOOL=$HOME/school
 export WORK=$HOME/work
 
