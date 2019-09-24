@@ -1,0 +1,9 @@
+#!/bin/sh
+
+ANS=$(echo "yes\nno" | dmenu -p "Want to shutdown ?")
+
+if test $ANS = yes; then
+
+	sudo poweroff
+
+fi
