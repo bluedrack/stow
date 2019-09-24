@@ -1,1 +1,4 @@
 #!/bin/sh
+URL="duckduckgo.com/?q=$(dmenu -p "Search" <&-| sed -e "s/ /+/g")"
+
+$BROWSER $URL

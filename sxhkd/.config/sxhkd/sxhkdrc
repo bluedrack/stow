@@ -8,6 +8,9 @@ super + shift + Return
 super + w
     $BROWSER
 
+super + s
+	search
+
 super + n
     $TERMINAL -e createnote
 
