@@ -1,4 +1,7 @@
-export PATH=$PATH:$HOME/.config/scripts/:$HOME/.local/bin/
+export PATH=$PATH:$HOME/.config/scripts/:$HOME/.local/bin/:$HOME/repos/jdk-11/bin/
+# idea
+export PATH=$PATH:$HOME/repos/idea/bin/
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 export XDG_CONFIG_HOME="$HOME/.config"
 

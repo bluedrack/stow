@@ -10,6 +10,7 @@ set expandtab
 set softtabstop=0 noexpandtab
 set tabstop=4
 
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 	Plug 'dylanaraps/wal.vim'
@@ -20,8 +21,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'scrooloose/nerdtree'
 	" Plug 'ntpeters/vim-better-whitespace'
 	Plug 'junegunn/goyo.vim'
-	Plug 'rhysd/vim-grammarous'
 	Plug 'tpope/vim-sensible'
+	Plug 'rhysd/vim-grammarous'
 call plug#end()
 
 " Colorscheme
@@ -31,10 +32,19 @@ hi StatusLine ctermbg=none cterm=bold
 hi! link Conceal Special
 hi! link Operator Normal
 
+" Cursor
+
+let &t_SI.="\e[5 q" "SI = INSERT mode
+let &t_SR.="\e[4 q" "SR = REPLACE mode
+let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
+
 " Sensible plugin
 set scrolloff=10
 set list
 set listchars=tab:\ \ ,trail:·,nbsp:_
+
+" Markdown 
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'java']
 
 " Markdown plugin
 
@@ -45,8 +55,10 @@ autocmd BufWritePost *polybar/config !pkill -USR1 polybar
 let mapleader = ","
 
 nmap <leader>c :w! \| !compiler <c-r>%<CR><CR>
-nmap <leader>o :w! \| !open	<c-r>%<CR><CR>
+nmap <leader>o :w! \| !open	<c-r>% &<CR><CR>
+
 " markdown shortcuts
+
 autocmd filetype *rmd nmap <Space><Space> /<++><Esc>d4li
 autocmd filetype *rmd nmap <leader>` a```{<++>}<CR><++><CR>```<Esc><Space><Space>
 autocmd filetype *rmd nmap <leader>$ a$$<Esc>i
@@ -56,6 +68,9 @@ autocmd filetype *rmd nmap <leader>-> a\to<Esc>
 autocmd filetype *rmd nmap <leader>d a\delta <Esc>
 autocmd filetype *rmd nmap <leader>D a\Delta <Esc>
 
+autocmd filetype *rmd nmap <leader>e o\begin{equation}<CR><++><CR>\end{equation}<ESC><Space><Space>
 
+
+autocmd filetype *rmd nmap <leader>v2 a<CR>\begin{pmatrix}<CR><++>\\<CR><++><CR>\end{pmatrix}<Esc><Space><Space>
 
 

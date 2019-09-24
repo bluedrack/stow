@@ -11,6 +11,10 @@ super + w
 super + n
     $TERMINAL -e createnote
 
+super + Escape
+	dmenupoweroff
+
+
 ## NODE GESTION
 # close and kill
 super + c
@@ -27,7 +31,8 @@ super + {_, shift} + {h,j,k,l}
     bspc node --{focus,swap} {west,south,north,east}
 
 super + {_, shift} + f
-    bspc node -t \~{fullscreen,floating}
+    bspc node -t \~{fullscreen,floating} \
+	togglepanel
 
 super + control + {h,j,k,l}
     {D1=west;D2=east;INC=-10;,D1=south;D2=north;INC=+10;,D1=north;D2=south;INC=-10;,D1=east;D2=west;INC=+10;} \

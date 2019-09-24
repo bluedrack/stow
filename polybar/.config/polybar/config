@@ -92,7 +92,7 @@ format-volume-padding = 1
 
 type = custom/script
 
-exec = echo "n." $(ls ~/school/*/ -alt | grep rmd | wc -l)
+exec = echo "n." $(ls ~/school/*/ -l | grep rmd | wc -l)
 label-padding = 1
 interval = 120
 ; [module/date]
