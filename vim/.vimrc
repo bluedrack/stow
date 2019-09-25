@@ -10,19 +10,19 @@ set expandtab
 set softtabstop=0 noexpandtab
 set tabstop=4
 
-
 " Plugins
 call plug#begin('~/.vim/plugged')
-	Plug 'dylanaraps/wal.vim'
-	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-	Plug 'junegunn/fzf.vim'
-	Plug 'tpope/vim-surround'
-	Plug 'tpope/vim-commentary'
-	Plug 'scrooloose/nerdtree'
-	" Plug 'ntpeters/vim-better-whitespace'
-	Plug 'junegunn/goyo.vim'
-	Plug 'tpope/vim-sensible'
-	Plug 'rhysd/vim-grammarous'
+Plug 'dylanaraps/wal.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'scrooloose/nerdtree'
+" Plug 'ntpeters/vim-better-whitespace'
+Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-sensible'
+Plug 'rhysd/vim-grammarous'
+Plug 'tpope/vim-markdown'
 call plug#end()
 
 " Colorscheme
@@ -44,7 +44,6 @@ set list
 set listchars=tab:\ \ ,trail:·,nbsp:_
 
 " Markdown 
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'java']
 
 " Markdown plugin
 
