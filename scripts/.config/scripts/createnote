@@ -12,9 +12,9 @@ if test $DI; then
 	echo $FILE
 	if test -f $FILE
 	then
-		vim "+normal Go" +startinsert $FILE
+		vim "+normal G" $FILE
 	else
 		# echo "%$(echo $DI | sed 's/.*/\u&/')\n%Orelian Kohler\n%$(date +"%A %d %B %y")" > $FILE 
-		vim "+normal Go" +startinsert $FILE
+		vim "+normal G" $FILE
 	fi
 fi

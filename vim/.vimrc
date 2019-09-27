@@ -63,13 +63,22 @@ autocmd filetype *rmd nmap <leader>` a```{<++>}<CR><++><CR>```<Esc><Space><Space
 autocmd filetype *rmd nmap <leader>$ a$$<Esc>i
 autocmd filetype *rmd nmap <leader>f a\frac{}{<++>}<Esc>6hi
 autocmd filetype *rmd nmap <leader>l a\lim_{<++> \to <++>} <++><Esc><Space><Space>
-autocmd filetype *rmd nmap <leader>-> a\to<Esc>
+autocmd filetype *rmd nmap <leader>t a\to<Esc>
 autocmd filetype *rmd nmap <leader>d a\delta <Esc>
 autocmd filetype *rmd nmap <leader>D a\Delta <Esc>
+autocmd filetype *rmd nmap <leader>ra a\rightarrow <Esc>
+autocmd filetype *rmd nmap <leader>la a\leftarrow <Esc>
+autocmd filetype *rmd nmap <leader>lra a\leftrightarrow <Esc>
+
+autocmd filetype *rmd nmap <leader>Ra a\Rightarrow <Esc>
+autocmd filetype *rmd nmap <leader>La a\Leftarrow <Esc>
+autocmd filetype *rmd nmap <leader>Lra a\Leftrightarrow <Esc>
+
+autocmd filetype *rmd nmap <leader>i a\infty
 
 autocmd filetype *rmd nmap <leader>e o\begin{equation}<CR><++><CR>\end{equation}<ESC><Space><Space>
 
 
-autocmd filetype *rmd nmap <leader>v2 a<CR>\begin{pmatrix}<CR><++>\\<CR><++><CR>\end{pmatrix}<Esc><Space><Space>
+autocmd filetype *rmd nmap <leader>v2 o<CR>\begin{pmatrix}<CR><++>\\<CR><++><CR>\end{pmatrix}<Esc><Space><Space>
 
 
