@@ -4,9 +4,9 @@ DIR="$HOME/wallpapers"
 WALL=$DIR/$(ls $DIR | dmenu -i -p "Wallpapers: ")
 if test -f $WALL; then
 	feh --bg-scale $WALL
-    A=$(echo "$(echo "scale=2;$(echo "scale=2;ibase=16; F0" | bc) / 256 * 100" | bc) / 1" | bc)
-    echo $A
-    wal -i $WALL --saturate 0.4
+    # A=$(echo "$(echo "scale=2;$(echo "scale=2;ibase=16; F2" | bc) / 256 * 100" | bc) / 1" | bc)
+    # echo $A
+    wal -e -t -n -i $WALL --saturate 0.4
 
     # export ALPHA=${printf '%x\n'$ALPHA}
 
@@ -29,8 +29,15 @@ if test -f $WALL; then
 		pkill dunst
 		cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst/dunstrc
 	}
+	
+	reloadpolybar(){
+		. $HOME/.zprofile
+		xrdb $HOME/.cache/wal/colors.Xresources
+		panel &
+	}
 	makedunst
     makest
 	makedmenu
+	reloadpolybar
 	# makedwm
 fi

@@ -1,7 +1,9 @@
 #!/bin/sh
 
 panel &
+notify-send "$(fortune)" &
 wmname bspwm
+mpd &
 
 
 bspc monitor DP-2 -d I II III IV V VI
@@ -13,7 +15,7 @@ bspc config single_monocle                  true
 bspc config borderless_monocle              true
 bspc config gapless_monocle                 true
 bspc config pointer_follows_monitor         true
-bspc config focus_follows_pointer           true
+bspc config focus_follows_pointer           false
 bspc config click_to_focus                  true
 
 # RULES

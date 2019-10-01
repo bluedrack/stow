@@ -5,5 +5,4 @@ setxkbmap ch fr
 xset r rate 240 60
 dunst &
 sxhkd &
-notify-send "$(fortune)" &
 exec bspwm

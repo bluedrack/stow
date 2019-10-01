@@ -8,7 +8,7 @@ base="${file%.*}"
 cd "$dir" || exit
 
 case "$file" in
-	*\.rmd) echo "require(rmarkdown); render('$file','pdf_document')" | R -q --vanilla 1> /dev/null 2> /dev/null && pdf $base.pdf 2> /dev/null;;
+	*\.rmd) echo "require(rmarkdown); render('$file','pdf_document')" | R -q --vanilla 1> /dev/null 2> /dev/null && pdf $base.pdf 2> /dev/null &;;
 	*\.md) pandoc "$file" --pdf-engine=xelatex -o "$base".pdf ;;
 	*config.h) sudo make install ;;
 esac

@@ -1,3 +1,4 @@
+#!/bin/zsh
 export PATH=$PATH:$HOME/.config/scripts/:$HOME/.local/bin/:$HOME/repos/jdk-11/bin/
 # idea
 export PATH=$PATH:$HOME/repos/idea/bin/
@@ -23,9 +24,9 @@ export BROWSER='firefox'
 export TERMINAL='st'
 export CALCULATOR='calc'
 
-source $HOME/.cache/wal/colors.sh
-export ALPHA='F2'
-export color0_alpha="#$ALPHA${color0/'#'}"
+. $HOME/.cache/wal/colors.sh
+export ALPHA="F2"
+export color0_alpha="#$ALPHA$(echo $color0 | sed -e "s/#//")"
 
 if [[ ! $DISPLAY ]]; then
 	exec startx

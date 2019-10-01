@@ -58,7 +58,7 @@ nmap <leader>o :w! \| !open	<c-r>% &<CR><CR>
 
 " markdown shortcuts
 
-autocmd filetype *rmd nmap <Space><Space> /<++><Esc>d4li
+autocmd filetype *rmd nmap <Space><Space> /<++><Esc>d4l
 autocmd filetype *rmd nmap <leader>` a```{<++>}<CR><++><CR>```<Esc><Space><Space>
 autocmd filetype *rmd nmap <leader>$ a$$<Esc>i
 autocmd filetype *rmd nmap <leader>f a\frac{}{<++>}<Esc>6hi
@@ -75,10 +75,14 @@ autocmd filetype *rmd nmap <leader>La a\Leftarrow <Esc>
 autocmd filetype *rmd nmap <leader>Lra a\Leftrightarrow <Esc>
 
 autocmd filetype *rmd nmap <leader>i a\infty
+autocmd filetype *rmd nmap <leader>R a\mathbb{R} <Esc>
+autocmd filetype *rmd nmap <leader>N a\mathbb{N} <Esc>
+autocmd filetype *rmd nmap <leader>C a\mathbb{C} <Esc>
+
 
 autocmd filetype *rmd nmap <leader>e o\begin{equation}<CR><++><CR>\end{equation}<ESC><Space><Space>
 
 
-autocmd filetype *rmd nmap <leader>v2 o<CR>\begin{pmatrix}<CR><++>\\<CR><++><CR>\end{pmatrix}<Esc><Space><Space>
+autocmd filetype *rmd nmap <leader>v2 o\begin{pmatrix}<CR><++>\\<CR><++><CR>\end{pmatrix}<Esc><Space><Space>
 
 

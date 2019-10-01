@@ -26,7 +26,7 @@ font-0 = monospace:pixelsize=14;0
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = notes pulseaudio battery date
+modules-right = notes mpd pulseaudio battery date
 separator = "•"
 
 [module/xwindow]
@@ -70,7 +70,7 @@ type = internal/pulseaudio
 
 ; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
 ; If not, uses default sink
-sink = alsa_output.pci-0000_12_00.3.analog-stereo
+; sink = alsa_output.pci-0000_12_00.3.analog-stereo
 
 ; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
 ; Default: true
@@ -127,6 +127,13 @@ interval = 120
 ; animation-charging-0 = Ch
 ; animation-charging-foreground = ${colors.foreground-alt}
 ; animation-charging-framerate = 750
+
+[module/mpd]
+type = internal/mpd
+
+host = 127.0.0.1
+port = 6600
+label-song-padding = 1
 
 [module/powermenu]
 type = custom/menu
