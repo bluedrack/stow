@@ -21,12 +21,16 @@ Plug 'scrooloose/nerdtree'
 " Plug 'ntpeters/vim-better-whitespace'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-sensible'
-Plug 'rhysd/vim-grammarous'
+" Plug 'rhysd/vim-grammarous'
 Plug 'tpope/vim-markdown'
+Plug 'raimondi/delimitmate'
+Plug 'vim-syntastic/syntastic'
+Plug 'plasticboy/vim-markdown'
+Plug 'ycm-core/YouCompleteMe'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 
 " Colorscheme
-
 colorscheme wal
 hi StatusLine ctermbg=none cterm=bold
 hi! link Conceal Special
@@ -43,7 +47,36 @@ set scrolloff=10
 set list
 set listchars=tab:\ \ ,trail:·,nbsp:_
 
+" Syntastic recomends
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_r_lintr_checker = 1
+let g:syntastic_r_checkers = ['lintr']
+
+" Spelling {{{
+set spelllang=fr
+set spellsuggest=best,10
+map ,s :setlocal spell!<CR>
+
+hi clear SpellBad
+hi SpellBad cterm=underline ctermfg=red
+hi clear SpellRare
+hi SpellRare cterm=underline,bold ctermfg=red
+hi clear SpellCap
+hi SpellCap cterm=underline ctermfg=blue
+hi clear SpellLocal
+hi SpellLocal cterm=underline ctermfg=green
+" set spellfile=$HOME/Nextcloud/Backups/vim/en.utf-8.add
+" }}}
+
 " Markdown 
+
+autocmd BufRead,BufNewFile *.rmd set filetype=markdown
 
 " Markdown plugin
 
