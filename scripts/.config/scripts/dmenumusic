@@ -1,0 +1,30 @@
+#!/bin/sh
+if [ ! -z "$(pgrep "mpd")" ]; then
+
+	CHOICES="pause/play\nnext\nprevious\nncmpcpp\nkill"
+	CHOICE=$(echo $CHOICES | dmenu )
+	case "$CHOICE" in
+		"pause/play" )
+			mpc toggle
+			;;
+		"next" )
+			mpc next
+			;;
+		"previous" )
+			mpc prev
+			;;
+		"kill" )
+			pkill mpd
+			;;
+		"ncmpcpp" )
+			$TERMINAL ncmpcpp
+			;;
+		esac
+else
+	CHOICE=$(echo "yes\nno" | dmenu -p "You want to start mpd ?")
+	if test $CHOICE = "yes"; then
+		mpd
+	fi
+fi
+# CHOICES="pause/play\nnext\nprevious"
+# CHOICE=$(echo $CHOICES | dmenu )

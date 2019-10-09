@@ -17,6 +17,8 @@ super + n
 super + Escape
 	dmenupoweroff
 
+super + m
+	dmenumusic	
 
 ## NODE GESTION
 # close and kill

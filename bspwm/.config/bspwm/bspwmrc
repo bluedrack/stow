@@ -3,8 +3,6 @@
 panel &
 notify-send "$(fortune)" &
 wmname bspwm
-mpd &
-
 
 bspc monitor DP-2 -d I II III IV V VI
 

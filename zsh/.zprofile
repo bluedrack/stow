@@ -20,7 +20,7 @@ export WORK=$HOME/work
 
 export EDITOR='vim'
 export IDE='code-oss'
-export BROWSER='firefox'
+export BROWSER='surf'
 export TERMINAL='st'
 export CALCULATOR='calc'
 

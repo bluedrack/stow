@@ -6,7 +6,7 @@
     separator_height = 10
 
     # Add vertical padding to the inside of the notification
-    padding = 20
+    padding = 24
 
     # Add horizontal padding for when the text gets long enough
     horizontal_padding = 0

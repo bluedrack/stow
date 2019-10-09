@@ -6,38 +6,42 @@ if test -f $WALL; then
 	feh --bg-scale $WALL
     # A=$(echo "$(echo "scale=2;$(echo "scale=2;ibase=16; F2" | bc) / 256 * 100" | bc) / 1" | bc)
     # echo $A
-    wal -e -t -n -i $WALL --saturate 0.4
+    wal -s -i $WALL --saturate 0.4
 
     # export ALPHA=${printf '%x\n'$ALPHA}
 
     makedwm () {
 		cd $DWM
-		sudo make clean install
+		sudo make clean install 1> /dev/null
 		killall dwm
 	}
 	makest () {
 		cd $ST
 		# pkill compton
 		# compton &
-		sudo make clean install
+		sudo make clean install 1> /dev/null
 	}
 	makedmenu (){
 		cd $DMENU
-	    sudo make clean install
+	    sudo make clean install 1> /dev/null 2> /dev/null
 	}
 	makedunst(){
 		pkill dunst
 		cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst/dunstrc
 	}
 	
+	updatesurf(){
+		cp $HOME/.cache/wal/surf.css $HOME/.surf/styles/default.css
+	}
+
 	reloadpolybar(){
-		. $HOME/.zprofile
 		xrdb $HOME/.cache/wal/colors.Xresources
-		panel &
+		panel 1> /dev/null 2> /dev/null &
 	}
 	makedunst
     makest
 	makedmenu
 	reloadpolybar
+	updatesurf
 	# makedwm
 fi
