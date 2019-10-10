@@ -1,0 +1,30 @@
+pre,textarea,body,input,td,tr,p,form,span {{
+	background-color: {background} !important;
+	color: {foreground} !important;
+}}
+
+input  {{
+	background-image: none !important;
+}}
+
+div, div::before, div::after {{
+	background-image: none !important;
+	background-color:{background} !important;
+	color: {foreground} !important;
+}}
+
+div * {{	
+	background-color:{background} !important;
+	color: {foreground} !important;
+}}
+
+img {{ -webkit-filter: invert(95%) hue-rotate(180deg); }}
+
+h1,h2,h3,h4 {{
+	background-color: {background} !important;
+	color: {foreground} !important;
+}}
+
+a {{
+	color: {color3} !important;
+}}

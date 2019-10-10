@@ -19,6 +19,7 @@ bspc config click_to_focus                  true
 # RULES
 
 bspc rule -a '*:zathura'                  state=tiled
+bspc rule -a '*:surf'                  state=tiled
 
 # Xorg config
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'

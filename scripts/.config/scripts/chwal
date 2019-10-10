@@ -31,17 +31,21 @@ if test -f $WALL; then
 	}
 	
 	updatesurf(){
-		cp $HOME/.cache/wal/surf.css $HOME/.surf/styles/default.css
+		cp $HOME/.cache/wal/web.css $HOME/.surf/styles/default.css
 	}
-
+	upadatequtebrowser(){
+		cp $HOME/.cache/wal/web.css $HOME/.config/qutebrowser/wal.css
+	}
 	reloadpolybar(){
 		xrdb $HOME/.cache/wal/colors.Xresources
 		panel 1> /dev/null 2> /dev/null &
 	}
+
 	makedunst
     makest
 	makedmenu
 	reloadpolybar
 	updatesurf
-	# makedwm
+	upadatequtebrowser
+# makedwm
 fi
