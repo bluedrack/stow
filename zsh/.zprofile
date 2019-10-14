@@ -29,5 +29,5 @@ export ALPHA="F2"
 export color0_alpha="#$ALPHA$(echo $color0 | sed -e "s/#//")"
 
 if [[ ! $DISPLAY ]]; then
-	exec startx
+	exec startx 1> /dev/null 2> /dev/null
 fi
