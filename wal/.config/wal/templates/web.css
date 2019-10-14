@@ -18,8 +18,6 @@ div * {{
 	color: {foreground} !important;
 }}
 
-img {{ -webkit-filter: invert(95%) hue-rotate(180deg); }}
-
 h1,h2,h3,h4 {{
 	background-color: {background} !important;
 	color: {foreground} !important;
