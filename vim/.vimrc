@@ -22,10 +22,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-sensible'
 " Plug 'rhysd/vim-grammarous'
-Plug 'tpope/vim-markdown'
+" Plug 'tpope/vim-markdown'
 Plug 'raimondi/delimitmate'
 Plug 'vim-syntastic/syntastic'
-Plug 'plasticboy/vim-markdown'
+" Plug 'plasticboy/vim-markdown'
 Plug 'ycm-core/YouCompleteMe'
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
@@ -82,6 +82,10 @@ autocmd BufRead,BufNewFile *.rmd set filetype=markdown
 
 autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
 autocmd BufWritePost *polybar/config !pkill -USR1 polybar
+
+" vimrc
+
+autocmd BufWritePost .vimrc :source %
 
 " Shortcuts
 let mapleader = ","
