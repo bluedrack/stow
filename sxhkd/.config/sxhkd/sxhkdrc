@@ -20,12 +20,15 @@ super + Escape
 super + m
 	dmenumusic	
 
+super + shift + m
+	mnt
+
 ## NODE GESTION
 # close and kill
 super + c
 	bspc node -c
 
-super + {_,shift + }{1-9,0}
+super + {_,shift + }{0-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 

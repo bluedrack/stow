@@ -1,0 +1,16 @@
+#!/bin/sh
+
+ANDROID=$(simple-mtpfs -l)
+echo $ANDROID
+
+
+if test "$ANDROID"
+then
+	MNT=$(echo $ANDROID | dmenu -p "Mount android:")
+	if test "$MNT"; then
+		simple-mtpfs --device $(echo $MNT | awk '{print $1}' | tr -d ":" ) ~/cell
+	fi
+else
+	notify-send "No android device !"
+fi
+

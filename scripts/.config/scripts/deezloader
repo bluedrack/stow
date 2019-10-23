@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd ~/repos/DeezloaderRemix
+
+npm run start
