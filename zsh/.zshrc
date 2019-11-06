@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-# export ZSH="/home/bluedrack/.oh-my-zsh"
+export ZSH="/home/bluedrack/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -22,6 +22,7 @@
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
+
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
@@ -67,24 +68,16 @@
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git)
+plugins=(
+	git
+	compleat
+	)
 
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-# export ST=$HOME/repos/st
-# export DWM=$HOME/repos/dwm
-# export DMENU=$HOME/repos/dmenu
-
-# export SCRIPTS=$HOME/.config/scripts
-
-# export EDITOR='vim'
-# export IDE='code-oss'
-# export BROWSER='firefox'
-# export TERMINAL='urxvt'
-
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -107,7 +100,5 @@
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias v="$EDITOR"
-
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias install="sudo xbps-install -S"
+alias remove="sudo xbps-remove -Q"
