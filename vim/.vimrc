@@ -90,6 +90,8 @@ autocmd BufWritePost .vimrc :source %
 " Shortcuts
 let mapleader = ","
 
+nmap <c-f> :FZF<CR>
+nmap <c-t> :NERDTreeToggle<CR>
 nmap <leader>c :w! \| !compiler <c-r>%<CR><CR>
 nmap <leader>o :w! \| !open	<c-r>% &<CR><CR>
 

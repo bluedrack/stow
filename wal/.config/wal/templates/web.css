@@ -23,15 +23,30 @@ div * {{
 	color: {foreground} !important;
 }}
 
+* {{	
+	background-color:{background} !important;
+	color: {foreground} !important;
+}}
+
 h1,h2,h3,h4 {{
 	background-color: {background} !important;
 	color: {foreground} !important;
 }}
 
-html, img { -webkit-filter: invert(95%) hue-rotate(180deg); }
+/* html, img {{ -webkit-filter: invert(95%) hue-rotate(180deg); }} */
 
 
 a {{
+	background-color: {background} !important;
+	color: {color2} !important;
+}}
+
+.link-gray-dark {{
+	background-color: {background} !important;
+	color: {color2} !important;
+}}
+
+div a {{
 	background-color: {background} !important;
 	color: {color2} !important;
 }}

@@ -215,20 +215,20 @@ set_from_resource $focus i3wm.color1 #f0f0f0
 set_from_resource $active i3wm.color2 #f0f0f0
 set_from_resource $inactive i3wm.color0 #f0f0f0
 
-bar {
-    strip_workspace_numbers yes
-	position top
-    separator_symbol "ꞏ"
-    colors {
-        background $sbg
-        statusline $sfg
-		separator  $sfg
+# bar {
+#     strip_workspace_numbers yes
+# 	position top
+#     separator_symbol "ꞏ"
+#     colors {
+#         background $sbg
+#         statusline $sfg
+# 		separator  $sfg
 
-   		focused_workspace  $focus 	$focus 	$sfg
-   		active_workspace   $active $active $active
-   		inactive_workspace $inactive $inactive $sfg
-   		urgent_workspace   #2F343A #900000 #FFFFFF
-   		binding_mode       #2F343A #900000 #FFFFFF
-    }
-    status_command i3blocks
-}
+#    		focused_workspace  $focus 	$focus 	$sfg
+#    		active_workspace   $active $active $active
+#    		inactive_workspace $inactive $inactive $sfg
+#    		urgent_workspace   #2F343A #900000 #FFFFFF
+#    		binding_mode       #2F343A #900000 #FFFFFF
+#     }
+#     status_command i3blocks
+# }
