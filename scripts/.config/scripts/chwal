@@ -40,12 +40,22 @@ if test -f $WALL; then
 		xrdb $HOME/.cache/wal/colors.Xresources
 		panel 1> /dev/null 2> /dev/null &
 	}
-
+	updateGrub(){
+		cp $WALL $DIR/grub.png	
+	}
+	updateIDEA(){
+		cd ~/repos/intellijPywal
+		./intellijPywalGen.sh ~/.IntelliJIdea2019.2/config
+		./intellijPywalGen.sh ~/.WebStorm2019.2/config
+		cd ~
+	}
 	makedunst
     makest
 	makedmenu
 	reloadpolybar
 	updatesurf
 	upadatequtebrowser
+	updateIDEA
+	updateGrub
 # makedwm
 fi

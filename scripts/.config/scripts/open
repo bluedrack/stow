@@ -12,4 +12,5 @@ case "$file" in
 	*\.md) pandoc "$file" --pdf-engine=xelatex -o "$base".pdf ;;
 	*\.zip) file-roller $file;;
 	*\.pdf) pdf $file;;
+	*\.png | *\.jpg) feh $file;;
 esac
