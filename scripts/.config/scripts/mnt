@@ -12,7 +12,7 @@ then
 		if test $(echo "yes\nno" | dmenu -p "have you accept ?") = "yes"; then
 
 			notify-send "Device mounted !" "~/cell"
-			simple-mtpfs --device $MNT ~/cell
+			simple-mtpfs --device $(echo $MNT | awk '{print $1}') ~/cell
 		fi
 	fi
 else
