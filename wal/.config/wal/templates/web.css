@@ -18,15 +18,15 @@ div {{
 	color: {foreground} !important;
 }}
 
-div * {{	
-	background-color:{background} !important;
-	color: {foreground} !important;
-}}
+/* div * {{ */	
+/* 	background-color:{background} !important; */
+/* 	color: {foreground} !important; */
+/* }} */
 
-* {{	
-	background-color:{background} !important;
-	color: {foreground} !important;
-}}
+/* * {{ */	
+/* 	background-color:{background} !important; */
+/* 	color: {foreground} !important; */
+/* }} */
 
 h1,h2,h3,h4 {{
 	background-color: {background} !important;

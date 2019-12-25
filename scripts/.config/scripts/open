@@ -9,7 +9,7 @@ cd "$dir" || exit
 
 case "$file" in
 	*\.rmd) echo "require(rmarkdown); render('$file','pdf_document')" | R -q --vanilla 1> /dev/null 2> /dev/null && pdf $base.pdf 2> /dev/null &;;
-	*\.md) pandoc "$file" --pdf-engine=xelatex -o "$base".pdf ;;
+	*\.md) echo "require(rmarkdown); render('$file','pdf_document')" | R -q --vanilla 1> /dev/null 2> /dev/null && pdf $base.pdf 2> /dev/null &;;
 	*\.zip) file-roller $file;;
 	*\.pdf) pdf $file;;
 	*\.png | *\.jpg) feh $file;;
