@@ -1,4 +1,4 @@
-pre,textarea,body,input,td,tr,p,form,span, section {{
+pre,textarea,body,input,td,tr,p,form,span, section, code {{
 	background-color: {background} !important;
 	color: {foreground} !important;
 }}
