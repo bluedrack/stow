@@ -1,0 +1,21 @@
+#!/bin/bash
+
+DOWNLOADFOLDER="$HOME/downloads/hentai"
+
+TITLE=$(echo $1 | awk -F/ '{print $5}')
+
+IMAGES=$(curl -Ls $1/all-pages | jq "." | grep full |  sed 's/.*\"\([^]]*\)\".*/\1/g')
+NBR=$(echo "$IMAGES" | wc -l)
+
+mkdir -p $DOWNLOADFOLDER/$TITLE
+cd $DOWNLOADFOLDER/$TITLE
+echo "$NBR"
+
+for i in $(seq $NBR)
+do
+	echo -en "\ec"
+	printf "$i/$NBR"
+	curl -s $(echo "$IMAGES" | head -n $i | tail -1) -o $TITLE-$i.jpg
+done
+echo -en "\ec"
+echo 'Hentai download with succes enjoy ! Me'
