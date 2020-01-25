@@ -20,7 +20,7 @@ export WORK=$HOME/work
 export EDITOR='vim'
 export IDE='code-oss'
 export BROWSER='qutebrowser'
-export TERMINAL='st'
+export TERMINAL='urxvt'
 export CALCULATOR='calc'
 
 . $HOME/.cache/wal/colors.sh

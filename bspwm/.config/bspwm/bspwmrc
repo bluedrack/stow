@@ -7,6 +7,7 @@ notify-send "$(fortune)" &
 wmname bspwm
 
 bspc monitor DP-2 -d I II III IV V VI VII
+bspc monitor eDP1 -d I II III IV V VI VII
 echo $color1
 bspc config focused_border_color "$color1"
 bspc config normal_border_color "$color0"
@@ -22,7 +23,8 @@ bspc config click_to_focus                  true
 
 # RULES
 
-bspc rule -a '*:zathura'               		state=tiled
+bspc rule -a '*:Zathura'               		state=tiled
+bspc rule -a Zathura               		state=tiled
 bspc rule -a '*:surf'                 		state=tiled
 bspc rule -a '*:jetbrains-idea' desktop=^6 follow=true
 bspc rule -a '*:jetbrains-webstorm' desktop=^6 follow=true

@@ -3,7 +3,7 @@
     geometry = "300x600-50+50"
 
     # Show multiple notifications in the same box
-    separator_height = 10
+    separator_height = 0
 
     # Add vertical padding to the inside of the notification
     padding = 24
@@ -19,7 +19,7 @@
     idle_threshold = 120
 
     # Font and typography settings
-    font = monospace 10
+    font = monospace 12
     alignment = center
     word_wrap = yes
 
