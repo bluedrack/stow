@@ -3,7 +3,7 @@
 source ~/.cache/wal/colors.sh
 
 panel &
-notify-send "$(fortune)" &
+# notify-send "$(fortune)" &
 wmname bspwm
 
 bspc monitor DP-2 -d I II III IV V VI VII
@@ -22,7 +22,7 @@ bspc config focus_follows_pointer           false
 bspc config click_to_focus                  true
 
 # RULES
-
+bspc rule -a discord                        desktop=^7 state=tiled
 bspc rule -a '*:Zathura'               		state=tiled
 bspc rule -a Zathura               		state=tiled
 bspc rule -a '*:surf'                 		state=tiled

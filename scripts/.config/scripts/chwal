@@ -41,7 +41,7 @@ if test -f $WALL; then
 		panel 1> /dev/null 2> /dev/null &
 	}
 	updateGrub(){
-		cp $WALL $DIR/grub.png	
+		convert $WALL $DIR/grub.png	
 	}
 	updateIDEA(){
 		cd ~/repos/intellijPywal
@@ -58,5 +58,6 @@ if test -f $WALL; then
 	updateIDEA
 	updateGrub
 	~/.config/bspwm/bspwmrc
+	dunstify -I $WALL "Wall change"
 # makedwm
 fi
