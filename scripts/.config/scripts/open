@@ -13,4 +13,5 @@ case "$file" in
 	*\.zip) file-roller $file;;
 	*\.pdf) pdf $file;;
 	*\.png | *\.jpg) feh $file;;
+	*) xdg-open $file;;
 esac

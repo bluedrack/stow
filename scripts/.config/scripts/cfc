@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BM=".bmscript"
+BM=$HOME/.bmscript
 CHOICE="$(cat $BM | awk '{ print $1}' | fzf --reverse)"
 if test ! -z  $CHOICE ; then
 	FILE=~/$(cat $BM | grep "$CHOICE" | awk '{print $2}')

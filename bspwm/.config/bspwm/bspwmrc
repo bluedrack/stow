@@ -3,7 +3,7 @@
 source ~/.cache/wal/colors.sh
 
 panel &
-# notify-send "$(fortune)" &
+#notify-send "$(fortune)" &
 wmname bspwm
 
 bspc monitor DP-2 -d I II III IV V VI VII
