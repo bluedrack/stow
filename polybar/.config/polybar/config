@@ -56,6 +56,13 @@ label-empty = %name%
 label-empty-foreground = ${colors.empty}
 label-empty-padding = 1
 
+[module/mpc]
+type = custom/script
+
+exec = mpc status | head --lines=1 
+label-padding = 1
+interval = 5
+
 [module/date]
 type = custom/script
 

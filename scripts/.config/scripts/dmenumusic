@@ -1,11 +1,15 @@
 #!/bin/sh
 if [ ! -z "$(pgrep "mpd")" ]; then
 
-	CHOICES="pause/play\nnext\nprevious\nncmpcpp\nkill"
+	CHOICES="pause/play\nplay all\nnext\nprevious\nncmpcpp\nkill"
 	CHOICE=$(echo $CHOICES | dmenu )
 	case "$CHOICE" in
 		"pause/play" )
 			mpc toggle
+			;;
+		"play all" )
+			mpc add / 
+			mpc random on
 			;;
 		"next" )
 			mpc next
