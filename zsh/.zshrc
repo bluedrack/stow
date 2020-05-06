@@ -70,7 +70,6 @@ ZSH_THEME="bluedrack"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
-	compleat
 	)
 # autoload -U compinit && compinit
 source $ZSH/oh-my-zsh.sh
@@ -100,5 +99,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias install="sudo xbps-install -S"
-alias remove="sudo xbps-remove -R"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -1,4 +1,3 @@
-
 [colors]
 ; background = ${env:color0_alpha:#222}
 background = ${xrdb:color0:#222}

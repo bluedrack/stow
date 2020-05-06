@@ -47,6 +47,7 @@ if test -f $WALL; then
 		cd ~/repos/intellijPywal
 		./intellijPywalGen.sh ~/.IntelliJIdea2019.2/config
 		./intellijPywalGen.sh ~/.WebStorm2019.2/config
+		./intellijPywalGen.sh ~/.PhpStorm2019.3/config
 		cd ~
 	}
 	makedunst

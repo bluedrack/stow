@@ -9,6 +9,27 @@ set shiftwidth=4
 set expandtab
 set softtabstop=0 noexpandtab
 set tabstop=4
+set smartindent
+set incsearch
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set noshowmode
+
+nnoremap <TAB> :bnext<CR>
+
+let mapleader = ","
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline_section_b = ''
+let g:airline_section_x = ''
+let g:airline_section_y = ''
+let g:airline_section_z = ''
+let g:airline_section_error = ''
+let g:airline_section_warning = ''
 
 " Plugins
 call plug#begin('~/.vim/plugged')
@@ -21,8 +42,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-sensible'
 Plug 'raimondi/delimitmate'
-
+Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " if hidden is not set, TextEdit might fail.
@@ -198,25 +221,27 @@ hi clear SpellLocal
 hi SpellLocal cterm=underline ctermfg=green
 " set spellfile=$HOME/Nextcloud/Backups/vim/en.utf-8.add
 " }}}
-
 " Markdown 
 
 autocmd BufRead,BufNewFile *.rmd set filetype=markdown
 
 " Markdown plugin
 
-autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
-autocmd BufWritePost *bspwmrc !% 1> /dev/null 2> /dev/nulll
-autocmd BufWritePost *polybar/config !pkill -USR1 polybar
+autocmd BufWritePost *sxhkdrc silent! !pkill -USR1 sxhkd
+autocmd BufWritePost *bspwmrc silent! !% 1> /dev/null 2> /dev/null
+autocmd BufWritePost *polybar/config silent! !pkill -USR1 polybar
 
 " vimrc
 
-autocmd BufWritePost .vimrc :source %
-autocmd BufWritePost */.init.vim :source %
+autocmd BufWritePost .vimrc silent! :source %
+autocmd BufWritePost **/init.vim silent! :source %
 
 " Shortcuts
-let mapleader = ","
 
+nmap <c-h> :tabp<CR>
+nmap <c-l> :tabn<CR>
+nmap <c-TAB> :tabn<CR>
+nmap <c-c> :tabclose<CR>
 nmap <c-f> :FZF<CR>
 nmap <c-t> :NERDTreeToggle<CR>
 nmap <leader>c :w! \| !compiler <c-r>%<CR><CR>

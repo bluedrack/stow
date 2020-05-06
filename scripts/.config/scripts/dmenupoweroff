@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ANS=$(echo "yes\nno\nreboot" | dmenu -p "Want to shutdown ?")
+ANS=$(printf "yes\nno\nreboot" | dmenu -p "Want to shutdown ?")
 
 if test $ANS = yes; then
 	sudo poweroff

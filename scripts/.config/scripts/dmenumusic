@@ -2,7 +2,7 @@
 if [ ! -z "$(pgrep "mpd")" ]; then
 
 	CHOICES="pause/play\nnext\nprevious\nncmpcpp\nkill"
-	CHOICE=$(echo $CHOICES | dmenu )
+	CHOICE=$(printf $CHOICES | dmenu )
 	case "$CHOICE" in
 		"pause/play" )
 			mpc toggle
@@ -21,7 +21,7 @@ if [ ! -z "$(pgrep "mpd")" ]; then
 			;;
 		esac
 else
-	CHOICE=$(echo "yes\nno" | dmenu -p "You want to start mpd ?")
+	CHOICE=$(printf "yes\nno" | dmenu -p "You want to start mpd ?")
 	if test $CHOICE = "yes"; then
 		mpd
 	fi

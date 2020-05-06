@@ -36,5 +36,5 @@ if test -z "${XDG_RUNTIME_DIR}"; then
 fi
 
 if [[ ! $DISPLAY ]]; then
-	exec startx 1> /dev/null 2> /dev/null
+	exec startx 1> /dev/null 2>/dev/null
 fi
