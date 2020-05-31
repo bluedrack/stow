@@ -3,15 +3,23 @@ export PATH=$PATH:$HOME/.config/scripts/:$HOME/.local/bin/:$HOME/repos/jdk-11/bi
 # idea
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+export XDG_DOWNLOAD_DIR="$HOME/dl"
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CACHE_HOME=$HOME/.cache
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
+export ANDROID_SDK_HOME="$XDG_CONFIG_HOME"/android
+export LESSHISTFILE=-
+export HISTFILE="$XDG_DATA_HOME"/zsh/history
+compinit -d .cache/zsh/zcompdump-$ZSH_VERSION
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-export ST=$HOME/repos/st
-export DWM=$HOME/repos/dwm
-export DMENU=$HOME/repos/dmenu
+export ST=$HOME/dox/repos/st
+export DWM=$HOME/dox/repos/dwm
+export DMENU=$HOME/dox/repos/dmenu
 
 export SCRIPTS=$HOME/dotfiles/scripts/.config/scripts
 export SCHOOL=$HOME/school
@@ -22,6 +30,8 @@ export IDE='code-oss'
 export BROWSER='qutebrowser'
 export TERMINAL='st'
 export CALCULATOR='calc'
+export DOCUMENT=$HOME/dox
+export DOWNLOAD=$HOME/dl
 
 . $HOME/.cache/wal/colors.sh
 export ALPHA="F2"

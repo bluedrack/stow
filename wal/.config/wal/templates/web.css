@@ -1,4 +1,4 @@
-pre,textarea,body,input,td,tr,p,form,span, section, code {{
+.title.ytd-guide-entry-renderer,#video-title.ytd-rich-grid-video-renderer,pre,textarea,body,input,td,tr,p,form,span, section, code {{
 	background-color: {background} !important;
 	color: {foreground} !important;
 }}
@@ -7,7 +7,7 @@ input  {{
 	background-image: none !important;
 }}
 
-div, div::before, div::after {{
+div, div::after {{
 	background-image: none !important;
 	background-color:{background} !important;
 	color: {foreground} !important;

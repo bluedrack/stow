@@ -1,7 +1,9 @@
 #!/bin/sh
 
-DIR="$HOME/wallpapers"
-WALL=$DIR/$(ls $DIR | dmenu -i -p "Wallpapers: ")
+DIR=$HOME/px/wl
+WALL=$(sxiv -tqob $DIR/*)
+echo $WALL
+# WALL=$DIR/$(ls $DIR | dmenu -i -p "Wallpapers: ")
 if test -f $WALL; then
 	feh --bg-scale $WALL
     # A=$(echo "$(echo "scale=2;$(echo "scale=2;ibase=16; F2" | bc) / 256 * 100" | bc) / 1" | bc)
@@ -30,9 +32,9 @@ if test -f $WALL; then
 		cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst/dunstrc
 	}
 	
-	updatesurf(){
-		cp $HOME/.cache/wal/web.css $HOME/.surf/styles/default.css
-	}
+	# updatesurf(){
+	# 	cp $HOME/.cache/wal/web.css $HOME/.surf/styles/default.css
+	# }
 	upadatequtebrowser(){
 		cp $HOME/.cache/wal/web.css $HOME/.config/qutebrowser/wal.css
 	}
@@ -44,7 +46,7 @@ if test -f $WALL; then
 		convert $WALL $DIR/grub.png	
 	}
 	updateIDEA(){
-		cd ~/repos/intellijPywal
+		cd $DOCUMENT/repos/intellijPywal
 		./intellijPywalGen.sh ~/.IntelliJIdea2019.2/config
 		./intellijPywalGen.sh ~/.PhpStorm2019.3/config
 		./intellijPywalGen.sh ~/.WebStorm2019.2/config
@@ -55,7 +57,6 @@ if test -f $WALL; then
     makest
 	makedmenu
 	reloadpolybar
-	updatesurf
 	upadatequtebrowser
 	updateIDEA
 	updateGrub

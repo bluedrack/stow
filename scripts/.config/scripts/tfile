@@ -1,0 +1,6 @@
+#!/bin/sh
+cd /tmp
+mkdir tfile 1> /dev/null 2> /dev/null
+cd tfile
+touch test 1> /dev/null 2> /dev/null
+vim test

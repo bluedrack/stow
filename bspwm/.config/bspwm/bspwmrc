@@ -5,7 +5,7 @@ source ~/.cache/wal/colors.sh
 dunst &
 panel &
 #notify-send "$(fortune)" &
-wmname bspwm
+# wmname bspwm
 
 bspc monitor DP-2 -d I II III IV V VI VII
 bspc monitor eDP1 -d I II III IV V VI VII

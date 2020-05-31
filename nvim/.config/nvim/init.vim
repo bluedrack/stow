@@ -25,12 +25,20 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline_section_b = ''
+let g:airline_section_c = ''
 let g:airline_section_x = ''
 let g:airline_section_y = ''
 let g:airline_section_z = ''
 let g:airline_section_error = ''
 let g:airline_section_warning = ''
+let g:airline#extensions#tabline#buffers_label = ''
 
+
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-p> :Files<cr> 
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'dylanaraps/wal.vim'
@@ -56,7 +64,7 @@ set nobackup
 set nowritebackup
 
 " Better display for messages
-set cmdheight=2
+" set cmdheight=2
 
 " You will have bad experience for diagnostic messages when it's default 4000.
 set updatetime=300
@@ -224,6 +232,7 @@ hi SpellLocal cterm=underline ctermfg=green
 " Markdown 
 
 autocmd BufRead,BufNewFile *.rmd set filetype=markdown
+autocmd BufRead,BufNewFile *.tex set filetype=tex
 
 " Markdown plugin
 
@@ -232,18 +241,15 @@ autocmd BufWritePost *bspwmrc silent! !% 1> /dev/null 2> /dev/null
 autocmd BufWritePost *polybar/config silent! !pkill -USR1 polybar
 
 " vimrc
-
-autocmd BufWritePost .vimrc silent! :source %
-autocmd BufWritePost **/init.vim silent! :source %
-
+autocmd bufwritepost init.vim source % 
 " Shortcuts
 
-nmap <c-h> :tabp<CR>
-nmap <c-l> :tabn<CR>
-nmap <c-TAB> :tabn<CR>
-nmap <c-c> :tabclose<CR>
-nmap <c-f> :FZF<CR>
-nmap <c-t> :NERDTreeToggle<CR>
+" nmap <c-h> :tabp<CR>
+" nmap <c-l> :tabn<CR>
+" nmap <c-TAB> :tabn<CR>
+" nmap <c-c> :tabclose<CR>
+" nmap <c-f> :FZF<CR>
+" nmap <c-t> :NERDTreeToggle<CR>
 nmap <leader>c :w! \| !compiler <c-r>%<CR><CR>
 nmap <leader>o :w! \| !open	<c-r>% &<CR><CR>
 
@@ -275,5 +281,3 @@ autocmd filetype *rmd nmap <leader>e o\begin{equation}<CR><++><CR>\end{equation}
 
 
 autocmd filetype *rmd nmap <leader>v2 o\begin{pmatrix}<CR><++>\\<CR><++><CR>\end{pmatrix}<Esc><Space><Space>
-
-
