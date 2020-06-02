@@ -1,10 +1,10 @@
 #!/bin/sh
 
 DIR=$HOME/px/wl
-WALL=$(sxiv -tqob $DIR/*)
+WALL=$D$(sxiv -tqob $DIR/*)
 echo $WALL
 # WALL=$DIR/$(ls $DIR | dmenu -i -p "Wallpapers: ")
-if test -f $WALL; then
+if [ -f "$WALL" ]; then
 	feh --bg-scale $WALL
     # A=$(echo "$(echo "scale=2;$(echo "scale=2;ibase=16; F2" | bc) / 256 * 100" | bc) / 1" | bc)
     # echo $A

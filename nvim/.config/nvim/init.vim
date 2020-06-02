@@ -20,7 +20,7 @@ set noshowmode
 
 nnoremap <TAB> :bnext<CR>
 
-let mapleader = ","
+let mapleader = " "
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = ''
@@ -32,7 +32,6 @@ let g:airline_section_z = ''
 let g:airline_section_error = ''
 let g:airline_section_warning = ''
 let g:airline#extensions#tabline#buffers_label = ''
-
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k

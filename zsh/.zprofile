@@ -12,7 +12,7 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export ANDROID_SDK_HOME="$XDG_CONFIG_HOME"/android
 export LESSHISTFILE=-
 export HISTFILE="$XDG_DATA_HOME"/zsh/history
-compinit -d .cache/zsh/zcompdump-$ZSH_VERSION
+# compinit -d .cache/zsh/zcompdump-$ZSH_VERSION
 
 # User configuration
 
