@@ -61,7 +61,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-sensible'
 Plug 'raimondi/delimitmate'
 Plug 'honza/vim-snippets'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neovimhaskell/haskell-vim'

@@ -10,5 +10,5 @@ sxhkd           .config/sxhkd/sxhkdrc
 vim             .config/nvim/init.vim
 web.css			.config/wal/templates/web.css
 xinit           .config/.xinitrc
-zprofile        .config/.zprofile
-zsh             .config/.zshrc
+zprofile        .config/zsh/.zprofile
+zsh             .config/zsh/.zshrc
