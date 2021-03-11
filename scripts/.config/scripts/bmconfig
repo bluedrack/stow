@@ -1,0 +1,14 @@
+alacritty       .config/alacritty/alacritty.yml
+bspwm           .config/bspwm/bspwmrc
+dunst           .config/wal/templates/dunstrc
+font			.config/fontconfig/fonts.conf 
+i3              .config/i3/config
+mpd				.config/mpd/mpd.conf
+polybar         .config/polybar/config
+qutebrowser 	.config/qutebrowser/config.py
+sxhkd           .config/sxhkd/sxhkdrc
+vim             .config/nvim/init.vim
+web.css			.config/wal/templates/web.css
+xinit           .config/.xinitrc
+zprofile        .config/.zprofile
+zsh             .config/.zshrc
