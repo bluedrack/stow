@@ -1,5 +1,5 @@
 #!/bin/sh
 
-cd ~/repos/DeezloaderRemix
+cd ~/dox/repos/DeezloaderRemix
 
 npm run start

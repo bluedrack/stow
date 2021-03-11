@@ -8,8 +8,7 @@ if [ -f "$WALL" ]; then
 	feh --bg-scale $WALL
     # A=$(echo "$(echo "scale=2;$(echo "scale=2;ibase=16; F2" | bc) / 256 * 100" | bc) / 1" | bc)
     # echo $A
-    wal -i $WALL --saturate 0.4
-
+    wal -i $WALL --saturate 0.4 -o ~/dox/repos/alacritty-color-export/allwal
     # export ALPHA=${printf '%x\n'$ALPHA}
 
     makedwm () {
@@ -17,12 +16,12 @@ if [ -f "$WALL" ]; then
 		sudo make clean install 1> /dev/null
 		killall dwm
 	}
-	makest () {
-		cd $ST
-		# pkill compton
-		# compton &
-		sudo make clean install 1> /dev/null
-	}
+	# makest () {
+	# 	cd $ST
+	# 	# pkill compton
+	# 	# compton &
+	# 	sudo make clean install 1> /dev/null
+	# }
 	makedmenu (){
 		cd $DMENU
 	    sudo make clean install 1> /dev/null 2> /dev/null
@@ -54,7 +53,7 @@ if [ -f "$WALL" ]; then
 		cd ~
 	}
 	makedunst
-    makest
+    # makest
 	makedmenu
 	reloadpolybar
 	upadatequtebrowser

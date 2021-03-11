@@ -1,2 +1,2 @@
 #!/bin/sh
-~/repos/WebStorm-192.7142.35/bin/webstorm.sh 1> /dev/null 2> /dev/null &
+~/dox/repos/WebStorm-192.7142.35/bin/webstorm.sh 1> /dev/null 2> /dev/null &

@@ -1,6 +1,6 @@
 
 super + Return
-    $TERMINAL
+    $TERM
 
 super + shift + Return
     dmenu_run
@@ -12,7 +12,7 @@ super + s
 	search
 
 super + n
-    $TERMINAL -e createnote
+    $TERM -e createnote
 
 super + Escape
 	dmenupoweroff

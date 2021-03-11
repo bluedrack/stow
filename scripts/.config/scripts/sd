@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOWNLOADFOLDER="~/dl/hentai"
+DOWNLOADFOLDER="$HOME/dl/hentai"
 
 TITLE=$(echo $1 | awk -F/ '{print $5}')
 
