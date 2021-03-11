@@ -36,6 +36,10 @@ export CALCULATOR='calc'
 export DOCUMENT=$HOME/dox
 export DOWNLOAD=$HOME/dl
 
+
+if test -f "$HOME/.cache/wal/colors.sh"; then
 . $HOME/.cache/wal/colors.sh
+fi
+
 export ALPHA="F2"
 export color0_alpha="#$ALPHA$(echo $color0 | sed -e "s/#//")"
