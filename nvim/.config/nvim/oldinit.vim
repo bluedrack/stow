@@ -48,6 +48,7 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-p> :Files<cr> 
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'dylanaraps/wal.vim'
