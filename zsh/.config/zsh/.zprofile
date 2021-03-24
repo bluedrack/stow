@@ -7,6 +7,6 @@ if test -z "${XDG_RUNTIME_DIR}"; then
     fi
 fi
 
-if [[ ! $DISPLAY ]]; then
+if [[ ! $DISPLAY && ! $WSL_DISTRO_NAME ]]; then
 	exec startx 1> /dev/null 2>/dev/null
 fi

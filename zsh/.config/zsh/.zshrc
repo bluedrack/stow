@@ -68,12 +68,14 @@ ZSH_THEME="bluedrack"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-	git
-	)
 # autoload -U compinit && compinit
-source $ZSH/oh-my-zsh.sh
 
+if test -f $ZSH/oh-my-zsh.sh; then
+	plugins=(
+		git
+	)
+	source $ZSH/oh-my-zsh.sh
+fi
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

@@ -37,6 +37,7 @@ export DOCUMENT=$HOME/dox
 export DOWNLOAD=$HOME/dl
 
 
+export PATH=$PATH:$SCRIPTS
 if test -f "$HOME/.cache/wal/colors.sh"; then
 . $HOME/.cache/wal/colors.sh
 fi
