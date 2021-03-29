@@ -3,9 +3,6 @@
 BM=$HOME/.config/scripts/bmconfig
 CHOICE="$(cat $BM | awk '{ print $1}' | fzf --reverse)"
 if test ! -z  $CHOICE ; then
-	FILE=~/$(cat $BM | grep "$CHOICE" | awk '{print $2}')
+	FILE=~/$( grep "$CHOICE" $BM | awk '{print $2}')
 	vim $FILE
 fi
-
-
-

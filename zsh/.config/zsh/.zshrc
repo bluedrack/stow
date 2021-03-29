@@ -76,6 +76,10 @@ if test -f $ZSH/oh-my-zsh.sh; then
 	)
 	source $ZSH/oh-my-zsh.sh
 fi
+
+if [[ $WSL_DISTRO_NAME && -z "$TMUX" ]]; then
+       tmux attach -t default || tmux new -s default
+fi
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

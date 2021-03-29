@@ -21,8 +21,14 @@ set noshowmode
 set hidden
 set nobackup
 set nowritebackup
-
+set clipboard=unnamed
+set shortmess+=c
 ]])
+
+-- augroup jdtls_lsp
+-- 	autocmd!
+-- 	autocmd FileType java lua require'jdtls_setup'.setup()
+-- augroup end
 require'compe'.setup {
 	enabled = true;
 	autocomplete = true;
@@ -43,6 +49,23 @@ require'compe'.setup {
 		calc = true;
 		nvim_lsp = true;
 		nvim_lua = true;
+		vsnip = true;
 	};
 }
 vim.o.completeopt = "menuone,noselect"
+local saga = require 'lspsaga'
+saga.init_lsp_saga()
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]]
+
+
+require'nvim-treesitter.configs'.setup {
+	ensure_installed = "maintained",
+	ignore = "javascript",
+	highlight = {
+		enable = true,
+	},
+
+}
+
+
+
