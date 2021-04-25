@@ -2,7 +2,6 @@
 
 Use `stow`
 
-
 ## Dependencies
 
 `stow`
@@ -14,6 +13,8 @@ Use `stow`
 `zsh`
 
 `oh-my-zsh`
+
+`tmux`
 
 ### Optional
 
