@@ -79,6 +79,7 @@ fi
 
 if [[ $WSL_DISTRO_NAME && -z "$TMUX" ]]; then
        tmux attach -t default || tmux new -s default
+       tmux set-option mouse-on
 fi
 # User configuration
 
