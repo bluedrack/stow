@@ -4,6 +4,7 @@ return require('packer').startup(function()
 	use 'tpope/vim-commentary'
 	use 'tpope/vim-repeat'
 	use 'tpope/vim-sensible'
+	use 'tpope/vim-fugitive'
 	use {
 		'junegunn/fzf.vim',
 		requires = {
@@ -30,4 +31,8 @@ return require('packer').startup(function()
 	}
 
 	use 'nvim-treesitter/nvim-treesitter'
+	use 'suoto/vim-hdl'
+	use 'vim-syntastic/syntastic'
+	use({'scalameta/nvim-metals'})
+  	use 'mhinz/vim-signify'	
 end)
