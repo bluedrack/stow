@@ -10,3 +10,12 @@ fi
 if [[ ! $DISPLAY && ! $WSL_DISTRO_NAME ]]; then
 	exec startx 1> /dev/null 2>/dev/null
 fi
+
+# >>> JVM installed by coursier >>>
+export JAVA_HOME="/home/bluedrack/.cache/coursier/jvm/adopt@1.8.0-292"
+export PATH="$PATH:/home/bluedrack/.cache/coursier/jvm/adopt@1.8.0-292/bin"
+# <<< JVM installed by coursier <<<
+
+# >>> coursier install directory >>>
+export PATH="$PATH:/home/bluedrack/.local/share/coursier/bin"
+# <<< coursier install directory <<<

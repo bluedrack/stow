@@ -1,0 +1,9 @@
+#!/bin/sh
+BM=$HOME/.config/scripts/bmlang
+LANG=$(cat $BM | fzf --reverse)
+read -p "Search : " SEARCH
+curl cheat.sh/$LANG/$SEARCH | less
+# if [[ $WSL_DISTRO_NAME ]]; then
+# $COMMAND
+# fi
+

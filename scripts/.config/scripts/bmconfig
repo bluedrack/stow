@@ -7,7 +7,7 @@ mpd		.config/mpd/mpd.conf
 polybar         .config/polybar/config
 qutebrowser 	.config/qutebrowser/config.py
 sxhkd           .config/sxhkd/sxhkdrc
-vim             .config/nvim/init.vim
+vim				.config/nvim/init.lua
 web.css		.config/wal/templates/web.css
 xinit		.config/.xinitrc
 zprofile	.config/zsh/.zprofile

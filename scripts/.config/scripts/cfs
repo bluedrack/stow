@@ -2,7 +2,7 @@
 
 FILE=$SCRIPTS/$(ls $SCRIPTS | fzf --reverse)
 if test -f  $FILE; then
-	vim $FILE
+	nvim $FILE
 fi
 
 
