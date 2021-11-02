@@ -59,7 +59,14 @@ require('lspconfig').html.setup {
 
 require('lspconfig').sumneko_lua.setup {
 	cmd = {"lua-language-server"},
-	capabilities = capabilities
+	capabilities = capabilities,
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { 'vim' }
+			}
+		}
+	}
 }
 
 require('lspconfig').vhdl_ls.setup {

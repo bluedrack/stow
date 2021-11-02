@@ -1,5 +1,4 @@
 vim.cmd([[
-
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
@@ -23,4 +22,5 @@ vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprevious<CR>', {noremap = true, silen
 
 vim.api.nvim_set_keymap('n', '<c-p>', ':Files<CR>', {noremap = true, silent = true})
 
-
+vim.api.nvim_set_keymap('n', '<c-g>s', ':Git<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<c-g>c', ':Git commit<CR>', {noremap = true, silent = true})
