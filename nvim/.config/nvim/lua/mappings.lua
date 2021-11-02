@@ -24,3 +24,4 @@ vim.api.nvim_set_keymap('n', '<c-p>', ':Files<CR>', {noremap = true, silent = tr
 
 vim.api.nvim_set_keymap('n', '<c-g>s', ':Git<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<c-g>c', ':Git commit<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<c-g>p', ':Git push<CR>', {noremap = true, silent = true})

@@ -26,5 +26,6 @@ return require('packer').startup(function()
 	}
 
 	use 'nvim-treesitter/nvim-treesitter'
-  	use 'mhinz/vim-signify'	
+  	use 'mhinz/vim-signify'
+	use 'jiangmiao/auto-pairs'
 end)
