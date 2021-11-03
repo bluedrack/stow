@@ -25,4 +25,5 @@ vim.api.nvim_set_keymap('n', '<leader>gc', ':Git commit<CR>', {noremap = true, s
 
 vim.api.nvim_set_keymap('n', '<leader>v', ':vsplit<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>h', ':split<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>t', ':terminal<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>t', ':vsplit<CR>:terminal<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>T', ':terminal<CR>', {noremap = true, silent = true})
