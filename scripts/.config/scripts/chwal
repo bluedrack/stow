@@ -56,8 +56,8 @@ if [ -f "$WALL" ]; then
     # makest
 	makedmenu
 	reloadpolybar
-	upadatequtebrowser
-	updateIDEA
+	# upadatequtebrowser
+	# updateIDEA
 	updateGrub
 	~/.config/bspwm/bspwmrc
 	dunstify -I $WALL "Wall change"
