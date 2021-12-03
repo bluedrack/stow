@@ -22,6 +22,11 @@ vim.api.nvim_set_keymap('n', '<c-p>', ':Files<CR>', {noremap = true, silent = tr
 
 vim.api.nvim_set_keymap('n', '<leader>gs', ':Git<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>gc', ':Git commit<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>gP', ':Git pull<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>gp', ':Git push<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>gvs', ':Gvdiffsplit!<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>gh', ':diffget \\2<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>gl', ':diffget \\3<CR>', {noremap = true, silent = true})
 
 vim.api.nvim_set_keymap('n', '<leader>v', ':vsplit<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>h', ':split<CR>', {noremap = true, silent = true})
