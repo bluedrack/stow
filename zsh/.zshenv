@@ -30,7 +30,7 @@ export WORK=$HOME/work
 
 export EDITOR='vim'
 export IDE='code-oss'
-export BROWSER='qutebrowser'
+export BROWSER='firefox'
 export TERM='alacritty'
 export CALCULATOR='calc'
 export DOCUMENT=$HOME/dox

@@ -28,10 +28,11 @@ return require('packer').startup(function()
 
 	use 'nvim-treesitter/nvim-treesitter'
   	use 'mhinz/vim-signify'
-	use 'jiangmiao/auto-pairs'
+	-- use 'jiangmiao/auto-pairs'
 	use {
 		'nvim-lualine/lualine.nvim',
 		requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
+	use 'nelsyeung/twig.vim'
 end)
 

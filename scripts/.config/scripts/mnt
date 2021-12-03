@@ -9,7 +9,7 @@ then
 	MNT=$(echo $ANDROID | dmenu -p "Mount android:")
 	if test "$MNT"; then
 		simple-mtpfs --device $(echo $MNT | awk '{print $1}' | tr -d ":" ) ~/cell
-		if test $(printf "yes\nno" | dmenu -p "have you accept ?") = "yes"; then
+		if test $(printf "yes\nno" | rofi -dmenu -p "have you accept ?") = "yes"; then
 
 			notify-send "Device mounted !" "~/cell"
 			simple-mtpfs --device $(echo $MNT | awk '{print $1}') ~/cell
