@@ -58,14 +58,14 @@ set shortmess+=c
 -- vim.cmd [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]]
 
 
-require'nvim-treesitter.configs'.setup {
-	ensure_installed = "maintained",
-	ignore = "javascript",
-	highlight = {
-		enable = true,
-	},
+-- require'nvim-treesitter.configs'.setup {
+-- 	ensure_installed = "maintained",
+-- 	ignore = "javascript",
+-- 	highlight = {
+-- 		enable = true,
+-- 	},
 
-}
+-- }
 
 
 
