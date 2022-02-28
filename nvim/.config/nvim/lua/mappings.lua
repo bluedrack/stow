@@ -33,7 +33,7 @@ vim.api.nvim_set_keymap('n', '<leader>h', ':split<CR>', {noremap = true, silent 
 vim.api.nvim_set_keymap('n', '<leader>t', ':vsplit<CR>:terminal<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>T', ':terminal<CR>', {noremap = true, silent = true})
 
-
+vim.api.nvim_set_keymap('t', '<esc>', '<C-\\><C-n>', {noremap = true, silent = true} )
 local opts = { noremap=true, silent=true }
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions

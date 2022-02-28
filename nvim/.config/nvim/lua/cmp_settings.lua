@@ -57,12 +57,14 @@ require('lspconfig').html.setup {
 	capabilities = capabilities
 }
 
-require('lspconfig').html.setup {
+require('lspconfig').clangd.setup {
 	capabilities = capabilities
 }
+
 require('lspconfig').tsserver.setup {
 	capabilities = capabilities
 }
+
 require('lspconfig').sumneko_lua.setup {
 	cmd = {"lua-language-server"},
 	capabilities = capabilities,
