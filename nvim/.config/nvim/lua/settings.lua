@@ -23,6 +23,7 @@ set nobackup
 set nowritebackup
 set clipboard=unnamed
 set shortmess+=c
+
 ]])
 
 require'nvim-treesitter.configs'.setup {
@@ -33,6 +34,4 @@ require'nvim-treesitter.configs'.setup {
 	},
 
 }
-
-
 

@@ -34,5 +34,7 @@ return require('packer').startup(function()
 	-- 	requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	-- }
 	use 'nelsyeung/twig.vim'
+	use 'sakhnik/nvim-gdb'
+	use "lukas-reineke/lsp-format.nvim"
 end)
 

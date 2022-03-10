@@ -1,9 +1,9 @@
 --- Set completeopt to have a better completion experience
+require("lsp-format").setup {}
 vim.o.completeopt = 'menuone,noselect'
 
 -- luasnip setup
 local luasnip = require('luasnip')
-
 local cmp = require('cmp')
 
 cmp.setup({
@@ -50,22 +50,27 @@ cmp.setup({
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 require('lspconfig').pyright.setup {
-	capabilities = capabilities
+	on_attach = require "lsp-format".on_attach,
+	capabilities = capabilities,
 }
 
 require('lspconfig').html.setup {
+	on_attach = require "lsp-format".on_attach,
 	capabilities = capabilities
 }
 
 require('lspconfig').clangd.setup {
+	on_attach = require "lsp-format".on_attach,
 	capabilities = capabilities
 }
 
 require('lspconfig').tsserver.setup {
-	capabilities = capabilities
+	on_attach = require "lsp-format".on_attach,
+	capabilities = capabilities,
 }
 
 require('lspconfig').sumneko_lua.setup {
+	on_attach = require "lsp-format".on_attach,
 	cmd = {"lua-language-server"},
 	capabilities = capabilities,
 	settings = {
@@ -78,11 +83,13 @@ require('lspconfig').sumneko_lua.setup {
 }
 
 require('lspconfig').vhdl_ls.setup {
+	on_attach = require "lsp-format".on_attach,
 	cmd = {"vhdl-ls"},
 	capabilities = capabilities
 }
 
 require('lspconfig').metals.setup {
+	on_attach = require "lsp-format".on_attach,
 	cmd = {"metals"},
 	capabilities = capabilities
 }
