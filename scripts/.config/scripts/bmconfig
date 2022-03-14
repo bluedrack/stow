@@ -13,3 +13,4 @@ xinit		.config/.xinitrc
 zprofile	.config/zsh/.zprofile
 zshrc		.config/zsh/.zshrc
 zshenv 		.zshenv
+lf 			.config/lf/lfrc
