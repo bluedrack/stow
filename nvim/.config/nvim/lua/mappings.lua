@@ -33,7 +33,7 @@ vim.api.nvim_set_keymap('n', '<leader>h', ':split<CR>', {noremap = true, silent 
 vim.api.nvim_set_keymap('n', '<leader>t', ':vsplit<CR>:terminal<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>T', ':terminal<CR>', {noremap = true, silent = true})
 
-
+vim.api.nvim_set_keymap('t', '<esc>', '<C-\\><C-n>', {noremap = true, silent = true} )
 local opts = { noremap=true, silent=true }
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
@@ -54,3 +54,7 @@ vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>'
 vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+
+
+
+vim.api.nvim_set_keymap('n', '<space>c', ':w<CR>:terminal<CR>igcc %:t -o %:r && ./%:r<CR>', opts)

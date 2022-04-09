@@ -3,7 +3,7 @@ super + Return
     $TERM
 
 super + shift + Return
-   	rofi -show run 
+	dmenu_run
 
 super + w
     $BROWSER

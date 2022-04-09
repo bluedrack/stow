@@ -15,7 +15,7 @@ set incsearch
 set smartcase
 set noswapfile
 set nobackup
-set undodir=~/.vim/undodir
+set undodir=~/.cache/vim/undo
 set undofile
 set noshowmode
 set hidden
@@ -23,6 +23,7 @@ set nobackup
 set nowritebackup
 set clipboard=unnamed
 set shortmess+=c
+
 ]])
 
 -- augroup jdtls_lsp
@@ -64,8 +65,5 @@ set shortmess+=c
 -- 	highlight = {
 -- 		enable = true,
 -- 	},
-
 -- }
-
-
 

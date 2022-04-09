@@ -40,7 +40,7 @@ export DOWNLOAD=$HOME/dl
 export PATH=$PATH:$SCRIPTS
 if test -f "$HOME/.cache/wal/colors.sh"; then
 . $HOME/.cache/wal/colors.sh
-wal -R 1> /dev/null
+wal -R 1> /dev/null 2> /dev/null
 fi
 
 export ALPHA="F2"
