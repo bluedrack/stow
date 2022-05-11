@@ -23,7 +23,7 @@ cmp.setup({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },
-    ['<Tab>'] = function(fallback)
+    ['<C-Tab>'] = function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
       elseif luasnip.expand_or_jumpable() then
@@ -82,6 +82,10 @@ require('lspconfig').sumneko_lua.setup {
 	}
 }
 
+-- require('lspconfig').vhdl_ls.setup {
+-- 	cmd = {"vhdl-ls"},
+-- 	capabilities = capabilities
+-- }
 require('lspconfig').vhdl_ls.setup {
 	on_attach = require "lsp-format".on_attach,
 	cmd = {"vhdl-ls"},
@@ -92,5 +96,16 @@ require('lspconfig').metals.setup {
 	on_attach = require "lsp-format".on_attach,
 	cmd = {"metals"},
 	capabilities = capabilities
+}
+
+require('lspconfig').cmake.setup {
+	capabilities = capabilities
+}
+require('lspconfig').clangd.setup {
+	capabilities = capabilities,
+    cmd = { "clangd", "--background-index" },
+    filetypes = { "c", "cpp", "objc"},
+    -- root_dir = root_pattern("compile_commands.json", "compile_flags.txt", ".git") or dirname,
+    single_file_support = true
 }
 
