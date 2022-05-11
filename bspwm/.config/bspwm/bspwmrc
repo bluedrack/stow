@@ -4,6 +4,7 @@ source ~/.cache/wal/colors.sh
 
 dunst &
 panel &
+picom &
 #notify-send "$(fortune)" &
 # wmname bspwm
 

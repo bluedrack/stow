@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.dotnet/tools:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/bluedrack/.config/oh-my-zsh"
@@ -129,5 +130,3 @@ lfcd () {
     fi
 }
 bindkey -s '^o' 'lfcd\n'
-
-

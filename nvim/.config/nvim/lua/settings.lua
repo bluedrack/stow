@@ -6,10 +6,10 @@ set relativenumber
 set number
 syntax on
 filetype plugin on
-set shiftwidth=4
+set shiftwidth=2
 set expandtab
 set softtabstop=0 noexpandtab
-set tabstop=4
+set tabstop=2
 set smartindent
 set incsearch
 set smartcase

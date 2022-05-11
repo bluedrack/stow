@@ -36,5 +36,6 @@ return require('packer').startup(function()
 	use 'nelsyeung/twig.vim'
 	use 'sakhnik/nvim-gdb'
 	use "lukas-reineke/lsp-format.nvim"
+	use 'github/copilot.vim'
 end)
 

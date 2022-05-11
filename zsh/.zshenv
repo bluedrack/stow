@@ -1,6 +1,7 @@
 export ZDOTDIR=$HOME/.config/zsh
 
 export PATH=$PATH:$HOME/.config/scripts/:$HOME/.local/bin/:$HOME/repos/jdk-11/bin/
+export PATH=$PATH:/home/bluedrack/.cargo/bin
 # idea
 export _JAVA_AWT_WM_NONREPARENTING=1
 
