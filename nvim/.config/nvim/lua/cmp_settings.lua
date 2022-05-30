@@ -86,11 +86,11 @@ require('lspconfig').sumneko_lua.setup {
 -- 	cmd = {"vhdl-ls"},
 -- 	capabilities = capabilities
 -- }
-require('lspconfig').vhdl_ls.setup {
-	on_attach = require "lsp-format".on_attach,
-	cmd = {"vhdl-ls"},
-	capabilities = capabilities
-}
+-- require('lspconfig').vhdl_ls.setup {
+-- 	on_attach = require "lsp-format".on_attach,
+-- 	cmd = {"vhdl-ls"},
+-- 	capabilities = capabilities
+-- }
 
 require('lspconfig').metals.setup {
 	on_attach = require "lsp-format".on_attach,
@@ -98,14 +98,14 @@ require('lspconfig').metals.setup {
 	capabilities = capabilities
 }
 
-require('lspconfig').cmake.setup {
-	capabilities = capabilities
-}
-require('lspconfig').clangd.setup {
-	capabilities = capabilities,
-    cmd = { "clangd", "--background-index" },
-    filetypes = { "c", "cpp", "objc"},
-    -- root_dir = root_pattern("compile_commands.json", "compile_flags.txt", ".git") or dirname,
-    single_file_support = true
-}
+-- require('lspconfig').cmake.setup {
+-- 	capabilities = capabilities
+-- }
+-- require('lspconfig').clangd.setup {
+-- 	capabilities = capabilities,
+--     cmd = { "clangd", "--background-index" },
+--     filetypes = { "c", "cpp", "objc"},
+--     -- root_dir = root_pattern("compile_commands.json", "compile_flags.txt", ".git") or dirname,
+--     single_file_support = true
+-- }
 
