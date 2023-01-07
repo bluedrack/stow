@@ -29,9 +29,9 @@ bspc rule -a discord                        desktop=^7 state=tiled
 bspc rule -a '*:Zathura'               		state=tiled
 bspc rule -a Zathura               		state=tiled
 bspc rule -a '*:surf'                 		state=tiled
-bspc rule -a '*:jetbrains-idea' desktop=^6 follow=true
-bspc rule -a '*:jetbrains-webstorm' desktop=^6 follow=true
-bspc rule -a '*:jetbrains-phpstorm' desktop=^6 follow=true
+# bspc rule -a '*:jetbrains-idea' desktop=^6 follow=true
+# bspc rule -a '*:jetbrains-webstorm' desktop=^6 follow=true
+# bspc rule -a '*:jetbrains-phpstorm' desktop=^6 follow=true
 
 # Xorg config
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'

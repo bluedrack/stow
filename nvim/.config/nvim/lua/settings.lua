@@ -23,7 +23,7 @@ set nobackup
 set nowritebackup
 set clipboard=unnamed
 set shortmess+=c
-
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'java']
 ]])
 
 -- augroup jdtls_lsp

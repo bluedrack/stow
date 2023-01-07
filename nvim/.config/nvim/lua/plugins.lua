@@ -37,5 +37,7 @@ return require('packer').startup(function()
 	use 'sakhnik/nvim-gdb'
 	use "lukas-reineke/lsp-format.nvim"
 	use 'github/copilot.vim'
+	use 'moll/vim-bbye'
+	use 'tpope/vim-markdown'
 end)
 

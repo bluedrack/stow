@@ -9,7 +9,8 @@ cd "$dir" || exit
 
 case "$file" in
 	*\.rmd) echo "require(rmarkdown); render('$file','pdf_document')" | R -q --vanilla ;;
-	*\.md) pandoc "$file" --pdf-engine=xelatex -o "$base".pdf ;;
+	*\.md) echo "require(rmarkdown); render('$file','pdf_document')" | R -q --vanilla ;;
+	# *\.md) pandoc "$file" --pdf-engine=xelatex -o "$base".pdf ;;
 	*config.h) sudo make install ;;
 	*\.java) javac $file | notify-send $(java $base);;
 	*\.c) gcc $file -o $base -lm && $base;;
