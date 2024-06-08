@@ -1,14 +1,51 @@
-require("plugins")
--- require("lsp/lsp-lua")
--- require("lsp/lsp-ts")
--- require("lsp/lsp-java")
--- vim.api.nvim_command([[
--- autocmd FileType java lua require('lsp/lsp-java')
+require('bluedrack')
+-- vim.cmd([[
+--
+-- set nocompatible
+-- set encoding=utf-8
+-- set relativenumber
+-- set number
+-- syntax on
+-- filetype plugin on
+-- set shiftwidth=2
+-- set expandtab
+-- set softtabstop=0 noexpandtab
+-- set tabstop=2
+-- set smartindent
+-- set incsearch
+-- set smartcase
+-- set noswapfile
+-- set nobackup
+-- set undodir=~/.cache/vim/undo
+-- set undofile
+-- set noshowmode
+-- set hidden
+-- set nobackup
+-- set nowritebackup
+-- set clipboard=unnamed
+-- set shortmess+=c
+-- let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'java']
 -- ]])
--- require("lsp")
-require("settings")
-require("mappings")
-require("lspconfig/rust-hdl")
-require("lspconfig/metals")
-require("cmp_settings")
--- require("lualine-settings")
+--
+-- -- require("plugins")
+-- -- require("settings")
+-- -- require("mappings")
+-- -- require("lsp")
+-- --
+-- --
+-- local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+-- if not (vim.uv or vim.loop).fs_stat(lazypath) then
+--   vim.fn.system({
+--     "git",
+--     "clone",
+--     "--filter=blob:none",
+--     "https://github.com/folke/lazy.nvim.git",
+--     "--branch=stable", -- latest stable release
+--     lazypath,
+--   })
+-- end
+-- vim.opt.rtp:prepend(lazypath)
+--
+-- require("lazy").setup({
+-- 	spec = "pp"
+-- })
